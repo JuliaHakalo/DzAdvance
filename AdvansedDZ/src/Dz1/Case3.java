@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Case3 implements Case {
 	private final Connection connection;
 	private final Scanner sc = new Scanner(System.in);
-	private static final String DELETE_FROM_DZ1="DELETE FROM dz1 where "
+	private final String DELETE_FROM_DZ1="DELETE FROM dz1 where "
 			+ "first_name=?,last_name=?,idifikant_kay=?,_number=?,hobby=?,weight=?,height=?," 
 			+ "gender=?,date_of_born=?,proffesion=?"; 
 	public Case3(Connection connection) {

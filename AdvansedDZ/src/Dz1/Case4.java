@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class Case4 implements Case{
 	private final Connection connection;
 	private final Scanner sc = new Scanner(System.in);
-	public static final String SELECT_DZ1_BY_ALL = 
-			"SELECT first_name,last_name,idifikant_kay,_number,hobby,weight,height," + 
+	public  final String SELECT_DZ1_BY_ALL = 
+			"SELECT id,first_name,last_name,idifikant_kay,_number,hobby,weight,height," + 
 			"gender,date_of_born,proffesion FROM dz1";
-	public static final String SELECT_DZ1_BY_ID = 
+	public  final String SELECT_DZ1_BY_ID = 
 			"SELECT first_name FROM dz1";
 	public Case4(Connection connection) {
 		this.connection = connection;
@@ -24,12 +24,17 @@ public class Case4 implements Case{
 				connection.prepareStatement(SELECT_DZ1_BY_ALL);
 				ResultSet rs = statement.executeQuery();
 				while(rs.next()){
-					System.out.println(rs.getString("first_name")+" "
-						+rs.getString("last_name")+" "+rs.getInt("idifikant_kay")+" "
-							+rs.getInt("_number")+" "+rs.getString("hobby")+" "
-							+rs.getInt("weight")+" "
-							+rs.getInt("height")+" "+rs.getString("gender")+" "
-							+rs.getInt("date_of_born")+" "+rs.getString("proffesion"));
+					System.out.println("id="+rs.getInt("id")+
+						" "+"first_name="+rs.getString("first_name")+
+						" "+"last_name="+rs.getString("last_name")+
+						" "+"idifikant_kay="+rs.getInt("idifikant_kay")+
+						" "+"_number="+rs.getInt("_number")+
+						" "+"hobby="+rs.getString("hobby")+
+						" "+"weight="+rs.getInt("weight")+
+						" "+"first_name="+rs.getInt("height")+
+						" "+"gender="+rs.getString("gender")+
+						" "+"date_of_born="+rs.getInt("date_of_born")+
+						" "+"proffesion="+rs.getString("proffesion"));
 				}
 				rs.close();
 				statement.close();

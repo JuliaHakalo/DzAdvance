@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Case2 implements Case {
 	private final Connection connection;
 	private final Scanner sc = new Scanner(System.in);
-	public static final String INSERT_TO_DZ1
+	public  final String INSERT_TO_DZ1
 	="INSERT INTO dz1(first_name,last_name,idifikant_kay,_number,hobby,weight,height,"
 			+ "gender,date_of_born,proffesion) VALUES(?,?,?,?,?,?,?,?,?,?)";
 	public Case2(Connection connection) {

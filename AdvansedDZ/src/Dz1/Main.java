@@ -23,11 +23,13 @@ Scanner sc = new Scanner(System.in);
 				map.put("2",new Case2(connection));
 				map.put("3",new Case3(connection));
 				map.put("4",new Case4(connection));
+				map.put("5",new Case5(connection));
 				do {
 					System.out.println("Enter 1 to create table");
 					System.out.println("Enter 2 to insert in table");
 					System.out.println("Enter 3 to delete from table");
 					System.out.println("Enter 4 to select from table");
+					System.out.println("Enter 5 to update table");
 
 				} while (map.getOrDefault(sc.next(),()->false).doWork());
 				
